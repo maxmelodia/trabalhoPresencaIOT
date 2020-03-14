@@ -3,6 +3,7 @@
 PUC Minas - Internet das Coisas: arquitetura, tecnologias e aplicações
 Arquitetura de Software Distribuído – Oferta 11
 
+
 Hardware
 - Arduino Uno
 - Ethernet Shield W5100
