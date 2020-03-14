@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "b5e071bf-a05d-43f1-af92-c08b4d099d9b",
+		"name": "Iniciando com AWS SNS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tópico",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/topico",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"topico"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tópico",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Xpto\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/topico",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"topico"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tópico/:Arn",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/topico/<ARN do tópico>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"topico",
+						"<ARN do tópico>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inscrição",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"endpoint\": \"5511951269220\",\n\t\"topicARN\": \"arn:aws:sns:us-east-1:141420777170:Lista\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/inscricao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"inscricao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inscrição/:subscriptionArn",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"endpoint\": \"5511951269220\",\n\t\"topicARN\": \"arn:aws:sns:us-east-1:141420777170:Lista\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/inscricao/<subscriptionArn da inscrição>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"inscricao",
+						"<subscriptionArn da inscrição>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SMS/Tópico",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"message\": \"Transactional\",\n\t\"topicARN\": \"arn:aws:sns:us-east-1:141420777170:Lista\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/sms/topico",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sms",
+						"topico"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SMS/Único",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"message\": \"Sucesso...\",\n\t\"phoneNumber\": \"5531993849097\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/sms/unico",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sms",
+						"unico"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

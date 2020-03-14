@@ -1,0 +1,3 @@
+preto=GND
+vermelho=5v ou vcc
+amarelo= pino7
